@@ -7,6 +7,10 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public SpriteRenderer spriteRenderer;
 
+    public GameInput gameInput;
+
+    private Vector2 inputVector;
+
     // Initial value
     public float movementSpeed = 5f;
     public float movementX;
@@ -34,32 +38,39 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void PlayerMovementController(){
+        inputVector = gameInput.GetMovementVectorNormalized();
+        Vector3 moveVector = new Vector3(inputVector.x, inputVector.y, 0f);
+        Debug.Log(inputVector);
+        transform.position += moveVector * Time.deltaTime * movementSpeed;
+
         // Debug.Log(transform.position);
-        movementX = Input.GetAxisRaw("Horizontal");
-        movementY = Input.GetAxisRaw("Vertical");
+        // movementX = Input.GetAxisRaw("Horizontal");
+        // movementY = Input.GetAxisRaw("Vertical");
 
-        Debug.Log(movementY);
+        // Debug.Log(movementY);
 
-        if (movementX != 0)
-        {
-            transform.position += new Vector3(movementX, 0f, 0f) * Time.deltaTime * movementSpeed;
-        };
+
+
+        // if (movementX != 0)
+        // {
+        //    transform.position += new Vector3(movementX, 0f, 0f) * Time.deltaTime * movementSpeed;
+        //};
         
-        if (movementY != 0)
-        {
-           transform.position += new Vector3(0f, movementY, 0f) * Time.deltaTime * movementSpeed;
-        };
+        //if (movementY != 0)
+        //{
+        //   transform.position += new Vector3(0f, movementY, 0f) * Time.deltaTime * movementSpeed;
+        //};
 
     }
 
     void AnimatePlayer(){
-        if (movementX < 0){
+        if (inputVector.x < 0){
             //transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             spriteRenderer.flipX = true;
             animator.SetInteger(FACE_DIRECTION_NUMBER, 2);
         }
 
-        else if (movementX > 0) {
+        else if (inputVector.x > 0) {
             spriteRenderer.flipX = false;
             animator.SetInteger(FACE_DIRECTION_NUMBER, 0);
         }
@@ -67,11 +78,11 @@ public class PlayerMovement : MonoBehaviour
 
 
         // TODO: refactor
-        if (movementY < 0)
+        if (inputVector.y< 0)
         {
             animator.SetInteger(FACE_DIRECTION_NUMBER, 1);
         }
-        else if (movementY > 0)
+        else if (inputVector.y > 0)
         {
             animator.SetInteger(FACE_DIRECTION_NUMBER, 3);
         }
