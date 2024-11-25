@@ -27,7 +27,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        
+        gameInput.OnInteractAction += GameInput_OnInteractAction;
+    }
+
+    private void GameInput_OnInteractAction(object sender, System.EventArgs e) {
+        Debug.Log("Hello World! from E Key");
     }
 
     // Update is called once per frame
