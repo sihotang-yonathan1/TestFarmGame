@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     void PlayerMovementController(){
         inputVector = gameInput.GetMovementVectorNormalized();
         Vector3 moveVector = new Vector3(inputVector.x, inputVector.y, 0f);
-        Debug.Log(inputVector);
+        // Debug.Log(inputVector);
         transform.position += moveVector * Time.deltaTime * movementSpeed;
 
     }
