@@ -43,29 +43,10 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(inputVector);
         transform.position += moveVector * Time.deltaTime * movementSpeed;
 
-        // Debug.Log(transform.position);
-        // movementX = Input.GetAxisRaw("Horizontal");
-        // movementY = Input.GetAxisRaw("Vertical");
-
-        // Debug.Log(movementY);
-
-
-
-        // if (movementX != 0)
-        // {
-        //    transform.position += new Vector3(movementX, 0f, 0f) * Time.deltaTime * movementSpeed;
-        //};
-        
-        //if (movementY != 0)
-        //{
-        //   transform.position += new Vector3(0f, movementY, 0f) * Time.deltaTime * movementSpeed;
-        //};
-
     }
 
     void AnimatePlayer(){
         if (inputVector.x < 0){
-            //transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             spriteRenderer.flipX = true;
             animator.SetInteger(FACE_DIRECTION_NUMBER, 2);
         }
@@ -75,9 +56,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetInteger(FACE_DIRECTION_NUMBER, 0);
         }
 
-
-
-        // TODO: refactor
         if (inputVector.y< 0)
         {
             animator.SetInteger(FACE_DIRECTION_NUMBER, 1);

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7708638178598157765}
   - component: {fileID: 4171682371125849485}
   - component: {fileID: 5785584347734514508}
+  - component: {fileID: 4453981385636617968}
   m_Layer: 0
   m_Name: Idle_Upscaled_0
   m_TagString: Untagged
@@ -128,6 +129,7 @@ MonoBehaviour:
   rigidBody: {fileID: 4171682371125849485}
   animator: {fileID: 3601865811951676962}
   spriteRenderer: {fileID: 977955903873049019}
+  gameInput: {fileID: 4453981385636617968}
   movementSpeed: 5
   movementX: 0
   movementY: 0
@@ -195,3 +197,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0.014063439, y: -0.00000010984124}
   m_Size: {x: 0.6684427, y: 1.12}
   m_Direction: 0
+--- !u!114 &4453981385636617968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3340783061239145340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49205b6ad6b219a48ae1f59ca556d83d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
