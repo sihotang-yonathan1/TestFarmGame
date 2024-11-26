@@ -7,7 +7,7 @@ jobs:
     name: Build for ${{ matrix.targetPlatform }}
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         targetPlatform:
           # - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
