@@ -42,14 +42,21 @@ jobs:
           path: build/${{ matrix.targetPlatform }}
         
       # Create GitHub release and upload artifact using gh CLI
-      - name: Create GitHub release and upload artifact
-        run: |
-          # Generate version name based on epoch time (or any other versioning method)
-          VERSION_NAME="v$(date +'%Y%m%d%H%M%S')"  # Example version using current date and time
+      # - name: Create GitHub release and upload artifact
+      #   run: |
+      #     # Generate version name based on epoch time (or any other versioning method)
+      #     VERSION_NAME="v$(date +'%Y%m%d%H%M%S')"  # Example version using current date and time
 
-          # Create a GitHub release using gh CLI
-          gh release create $VERSION_NAME \
-            build/${{ matrix.targetPlatform }}/your-artifact.zip \
-            --title "$VERSION_NAME"
+      #     # Create a GitHub release using gh CLI
+      #     gh release create $VERSION_NAME \
+      #       build/${{ matrix.targetPlatform }}/your-artifact.zip \
+      #       --title "$VERSION_NAME"
 
-          echo "Release $VERSION_NAME created and artifact uploaded successfully."
+      #     echo "Release $VERSION_NAME created and artifact uploaded successfully."
+
+      # ref: https://github.com/orgs/community/discussions/25213#discussioncomment-3246871
+      - name: upload binaries to release
+        uses: softprops/action-gh-release@v1
+        if: ${{startsWith(github.ref, 'refs/tags/') }}
+        with:
+            files: build/${{ matrix.targetPlatform }}/your-artifact.zip
