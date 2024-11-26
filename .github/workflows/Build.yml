@@ -40,3 +40,17 @@ jobs:
         with:
           name: Build-${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
+        
+      # Create GitHub release and upload artifact using gh CLI
+      - name: Create GitHub release and upload artifact
+        run: |
+          # Generate version name based on epoch time (or any other versioning method)
+          VERSION_NAME="v$(date +'%Y%m%d%H%M%S')"  # Example version using current date and time
+
+          # Create a GitHub release using gh CLI
+          gh release create $VERSION_NAME \
+            build/${{ matrix.targetPlatform }}/your-artifact.zip \
+            --title "$VERSION_NAME" \
+            --notes "Release for ${matrix.targetPlatform}"
+
+          echo "Release $VERSION_NAME created and artifact uploaded successfully."
