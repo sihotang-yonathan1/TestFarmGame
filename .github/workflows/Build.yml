@@ -53,7 +53,22 @@ jobs:
       #       --title "$VERSION_NAME"
 
       #     echo "Release $VERSION_NAME created and artifact uploaded successfully."
-
+      - name: version
+        run: echo "v$(date +'%Y%m%d%H%M%S')"
+        id: version
+      
+      - name: release
+        uses: actions/create-release@v1
+        id: create_release
+        with:
+          draft: false
+          prerelease: false
+          release_name: ${{ steps.version.outputs.version }}
+          tag_name: ${{ github.ref }}
+          body_path: CHANGELOG.md
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          
       # ref: https://github.com/orgs/community/discussions/25213#discussioncomment-3246871
       - name: upload binaries to release
         uses: softprops/action-gh-release@v1
