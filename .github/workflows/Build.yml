@@ -50,7 +50,6 @@ jobs:
           # Create a GitHub release using gh CLI
           gh release create $VERSION_NAME \
             build/${{ matrix.targetPlatform }}/your-artifact.zip \
-            --title "$VERSION_NAME" \
-            --notes "Release for ${matrix.targetPlatform}"
+            --title "$VERSION_NAME"
 
           echo "Release $VERSION_NAME created and artifact uploaded successfully."
