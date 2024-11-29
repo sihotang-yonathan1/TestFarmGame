@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -50,24 +51,38 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void AnimatePlayer(){
-        if (inputVector.x < 0){
+       
+        if (inputVector.x < 0f)
+        {
             spriteRenderer.flipX = true;
-            animator.SetInteger(FACE_DIRECTION_NUMBER, 2);
         }
-
-        else if (inputVector.x > 0) {
+        else
+        {
             spriteRenderer.flipX = false;
-            animator.SetInteger(FACE_DIRECTION_NUMBER, 0);
         }
 
-        if (inputVector.y< 0)
-        {
-            animator.SetInteger(FACE_DIRECTION_NUMBER, 1);
-        }
-        else if (inputVector.y > 0)
-        {
-            animator.SetInteger(FACE_DIRECTION_NUMBER, 3);
-        }
+        animator.SetFloat("horizontal", inputVector.x);
+
+        animator.SetFloat("vertical", inputVector.y);
+
+        //if (inputVector.x < 0){
+        //    spriteRenderer.flipX = true;
+        //    animator.SetInteger(FACE_DIRECTION_NUMBER, 2);
+        //}
+
+        //else if (inputVector.x > 0) {
+        //   spriteRenderer.flipX = false;
+        //    animator.SetInteger(FACE_DIRECTION_NUMBER, 0);
+        //}
+        //
+        //if (inputVector.y< 0)
+        //{
+        //    animator.SetInteger(FACE_DIRECTION_NUMBER, 1);
+        //}
+        //else if (inputVector.y > 0)
+        //{
+        //    animator.SetInteger(FACE_DIRECTION_NUMBER, 3);
+        //}
 
     }
 }
