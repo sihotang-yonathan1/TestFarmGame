@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5084592247573981911}
   - component: {fileID: 7751193097894297613}
   - component: {fileID: 6298545931189844623}
+  - component: {fileID: 2919702637124740327}
   m_Layer: 0
   m_Name: Maple Tree_2
   m_TagString: Untagged
@@ -75,8 +76,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -315375209
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -1425678829478245854, guid: 6638a820f7dfe2f438b38cbdd97daa81, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -150,7 +151,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0074749608, y: -0.1071793}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -160,5 +161,17 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.22, y: 0.35}
+  m_Size: {x: 0.13926718, y: 0.12833223}
   m_EdgeRadius: 0
+--- !u!114 &2919702637124740327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458128851687040815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d201749a047894996c31d808eb102e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

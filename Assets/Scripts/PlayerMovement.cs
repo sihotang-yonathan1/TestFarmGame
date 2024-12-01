@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public GameInput gameInput;
 
     private Vector2 inputVector;
+    public Vector2 lastMotionMovement;
 
     // Initial value
     public float movementSpeed = 5f;
@@ -56,12 +57,28 @@ public class PlayerMovement : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
+
         animator.SetFloat("horizontal", inputVector.x);
 
         animator.SetFloat("vertical", inputVector.y);
-        
 
-        animator.SetBool(IS_WALKING, true);
+        // if moving
+        bool isWalking = inputVector.x != 0 || inputVector.y != 0;
+        if (isWalking)
+        {
+            animator.SetBool(IS_WALKING, true);
+        }
+        else {
+            animator.SetBool(IS_WALKING, false);
+        }
+ 
+        
+        if (isWalking)
+        {
+            lastMotionMovement = new Vector2(inputVector.x, inputVector.y).normalized;
+            animator.SetFloat("lastHorizontal", inputVector.x);
+            animator.SetFloat("lastVertical", inputVector.y);
+        }
 
     }
 }
