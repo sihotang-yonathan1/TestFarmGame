@@ -18,12 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public float movementY;
 
     // Constant 
-    private string FACE_DIRECTION_NUMBER = "FaceDirection";
-    // The direction are
-    // East: 0
-    // South: 1
-    // West: 2
-    // North: 3
+    private string IS_WALKING = "isWalk";
 
 
     void Start()
@@ -64,6 +59,9 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("horizontal", inputVector.x);
 
         animator.SetFloat("vertical", inputVector.y);
+        
+
+        animator.SetBool(IS_WALKING, true);
 
     }
 }
