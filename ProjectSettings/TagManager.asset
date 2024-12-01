@@ -45,5 +45,8 @@ TagManager:
   - name: Player
     uniqueID: 781898411
     locked: 0
+  - name: TreeBackground
+    uniqueID: 3979592087
+    locked: 0
   m_RenderingLayers:
   - Default
