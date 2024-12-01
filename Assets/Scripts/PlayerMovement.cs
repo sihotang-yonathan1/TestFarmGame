@@ -47,15 +47,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void AnimatePlayer(){
-       
-        if (inputVector.x < 0f)
-        {
-            spriteRenderer.flipX = true;
-        }
-        else
-        {
-            spriteRenderer.flipX = false;
-        }
+
+        // flip x axis when the input vector in x axis below 0 (when to left)
+        spriteRenderer.flipX = (inputVector.x < 0f);
 
 
         animator.SetFloat("horizontal", inputVector.x);
@@ -64,17 +58,10 @@ public class PlayerMovement : MonoBehaviour
 
         // if moving
         bool isWalking = inputVector.x != 0 || inputVector.y != 0;
-        if (isWalking)
-        {
-            animator.SetBool(IS_WALKING, true);
-        }
-        else {
-            animator.SetBool(IS_WALKING, false);
-        }
- 
+        animator.SetBool(IS_WALKING, isWalking);
+       
         
-        if (isWalking)
-        {
+        if (isWalking){
             lastMotionMovement = new Vector2(inputVector.x, inputVector.y).normalized;
             animator.SetFloat("lastHorizontal", inputVector.x);
             animator.SetFloat("lastVertical", inputVector.y);
