@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 63147166}
   - component: {fileID: 63147167}
+  - component: {fileID: 63147168}
   m_Layer: 0
   m_Name: UndergroundDoorContainer
   m_TagString: Untagged
@@ -199,6 +200,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.6882405, y: 2.0753767}
   m_EdgeRadius: 0
+--- !u!114 &63147168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63147164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a82d8cd7bfdf7f4dbe02fea1e6ffdd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemWhenActive: {fileID: 1921356270}
+  itemWhenInactive: {fileID: 143080977}
+  currentState: 0
+  gameInput: {fileID: 1418370807}
 --- !u!1 &143080977
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,6 +904,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4202838107621804616, guid: fa9d28cc8d48da94e9cbb6346b5e9150, type: 3}
   m_PrefabInstance: {fileID: 696086654214489649}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1418370807 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4453981385636617968, guid: fa9d28cc8d48da94e9cbb6346b5e9150, type: 3}
+  m_PrefabInstance: {fileID: 696086654214489649}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197421982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49205b6ad6b219a48ae1f59ca556d83d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &1418370809 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 4171682371125849485, guid: fa9d28cc8d48da94e9cbb6346b5e9150, type: 3}
