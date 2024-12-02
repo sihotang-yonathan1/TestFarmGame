@@ -136,7 +136,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -4546,12 +4546,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_197
+      name: TreeLog
       rect:
         serializedVersion: 2
         x: 48
         y: 480
-        width: 16
+        width: 48
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -24013,7 +24013,6 @@ TextureImporter:
       Overworld_194: -189791025
       Overworld_195: -1689783866
       Overworld_196: 317641076
-      Overworld_197: 1947202390
       Overworld_198: -1021764816
       Overworld_199: 1241973631
       Overworld_2: -7179496123588461096
@@ -24902,6 +24901,7 @@ TextureImporter:
       Overworld_997: 1968642994
       Overworld_998: 437057108
       Overworld_999: 1335609721
+      TreeLog: 1947202390
       underground_door_closed: 1464924010
       underground_door_open: -162589429
   mipmapLimitGroupName: 

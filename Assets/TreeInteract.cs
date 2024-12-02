@@ -9,6 +9,8 @@ public class TreeInteract : MonoBehaviour
     public float damage = 5f;
 
     public float health = 100f;
+    public GameObject dropItem;
+    public int dropItemNumber = 5;
 
     // Reference to the player's GameInput
     public GameInput gameInput;
@@ -33,16 +35,31 @@ public class TreeInteract : MonoBehaviour
 
     private void Hit()
     {
-        if (health != 0)
+        if (health > 0)
         {
             health -= damage;
             Debug.Log(health);
         }
         else
         {
+            DropItems();
             Destroy(gameObject);
         }
     }
+
+    private void DropItems()
+    {
+        if (dropItem != null && dropItemNumber > 0)
+        {
+            for (int i = 0; i < dropItemNumber; i++)
+            {
+                // Instantiate the dropItem at the tree's position
+                Debug.Log("Instantiate Item Drop");
+                Instantiate(dropItem);
+            }
+        }
+    }
+
 
 
 
@@ -68,6 +85,7 @@ public class TreeInteract : MonoBehaviour
         // Unsubscribe from event when destroyed to avoid memory leaks
         if (gameInput != null)
         {
+            
             gameInput.OnInteractAction -= OnInteractAction;
         }
     }
