@@ -3,22 +3,23 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     public GameObject inventoryPanel;  // Reference to the inventory panel
+    public GameObject pausePanel;
 
     void Start()
     {
-        // Make sure the inventory panel is hidden at the start
-        if (inventoryPanel != null)
-        {
-            inventoryPanel.SetActive(false);
-        }
+        // Make sure the panel is hidden at the start
+        inventoryPanel?.SetActive(false);
+        pausePanel?.SetActive(false);
     }
 
     // Call this method to toggle the inventory panel visibility
     public void ToggleInventoryPanel()
     {
-        if (inventoryPanel != null)
-        {
-            inventoryPanel.SetActive(!inventoryPanel.activeSelf);
-        }
+        inventoryPanel?.SetActive(!inventoryPanel.activeSelf);   
+    }
+
+    public void TogglePausePanel()
+    {
+        pausePanel?.SetActive(!pausePanel.activeSelf);
     }
 }
