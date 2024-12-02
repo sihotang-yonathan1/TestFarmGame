@@ -34,11 +34,13 @@ public class UndergroundInteract : MonoBehaviour {
 
         if (currentState)
         {
+            Debug.Log("Under Ground Door Open");
             itemWhenActive.SetActive(true);
             itemWhenInactive.SetActive(false);
         }
         else
         {
+            Debug.Log("Under Ground Door Closed");
             itemWhenActive.SetActive(false);
             itemWhenInactive.SetActive(true);
         }
