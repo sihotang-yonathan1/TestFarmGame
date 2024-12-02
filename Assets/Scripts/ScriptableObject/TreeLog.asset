@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccca5e7ce5a9714084531d655147cb5, type: 3}
   m_Name: TreeLog
   m_EditorClassIdentifier: 
-  itemName: 
-  itemDescription: 
+  itemName: Tree Log
+  itemIcon: {fileID: 1947202390, guid: d11f0061eb9e9ca4cb928a3a1fec8415, type: 3}
+  itemDescription: Tree Log huh?
   itemAmount: 1

@@ -4,7 +4,7 @@ using UnityEngine;
 public class ItemScriptableObject : ScriptableObject
 {
     public string itemName;
-    // public Sprite itemIcon;
+    public Sprite itemIcon;
     public string itemDescription;
     public int itemAmount = 1;
     
