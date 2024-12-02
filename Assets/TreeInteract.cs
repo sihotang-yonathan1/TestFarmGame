@@ -14,6 +14,7 @@ public class TreeInteract : MonoBehaviour
 
     // Reference to the player's GameInput
     public GameInput gameInput;
+    public Inventory playerInventory;
 
     void Start()
     {
@@ -55,13 +56,16 @@ public class TreeInteract : MonoBehaviour
             {
                 // Instantiate the dropItem at the tree's position
                 Debug.Log("Instantiate Item Drop");
-                Instantiate(dropItem);
+                GameObject newItem = Instantiate(dropItem);
+                // Get the ItemPickup component and set the Inventory reference
+                ItemPickup itemPickup = newItem.GetComponent<ItemPickup>();
+                if (itemPickup != null)
+                {
+                    itemPickup.inventory = playerInventory;
+                }
             }
         }
     }
-
-
-
 
     // Trigger detection to see if the player is near
     private void OnTriggerEnter2D(Collider2D collision)
