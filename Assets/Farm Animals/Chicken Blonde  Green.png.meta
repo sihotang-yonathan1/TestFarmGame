@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -132,19 +132,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 16
         width: 16
-        height: 32
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7c0435c5fcef9c8d0800000000000000
-      internalID: -2825447124637630265
+      spriteID: f23943f8338ee0a4891846390c9bb746
+      internalID: -1977093720
       vertices: []
       indices: 
       edges: []
@@ -154,25 +154,91 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 15
+        y: 16
         width: 16
-        height: 17
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 35d42356f18ef8f70800000000000000
-      internalID: 9191820586025897299
+      spriteID: 556c19e416535ae4188371d3b0b08a13
+      internalID: 874663990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: Chicken Blonde  Green_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ffae76a193bf294288fba32b2e8e70f
+      internalID: -2105493560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Blonde  Green_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3c43db1d9721042afd6271a8e5093e
+      internalID: 981515447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Blonde  Green_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d952755d65e41f438902285370dd310
+      internalID: -1648260176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Blonde  Green_5
       rect:
         serializedVersion: 2
         x: 16
@@ -185,60 +251,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b832deb9f387f87b0800000000000000
-      internalID: -5219821228504833141
+      spriteID: 191dc7f43b20b4f4591486ca640005f9
+      internalID: 254128353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken Blonde  Green_3
+      name: Chicken Blonde  Green_6
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 16
-        height: 32
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e52eb679c94f60d00800000000000000
-      internalID: 938706525745832542
+      spriteID: 4097f603b9f0ae744b7001ddcaba45ae
+      internalID: -1251489081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken Blonde  Green_4
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 15
-        width: 16
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fd5d46a3bb173dba0800000000000000
-      internalID: -6065379224185416225
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chicken Blonde  Green_5
+      name: Chicken Blonde  Green_7
       rect:
         serializedVersion: 2
         x: 48
@@ -251,10 +295,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7230ccada3b93a570800000000000000
-      internalID: 8476789600722617127
+      spriteID: 22606927c2de10a4a85befb76b5f063b
+      internalID: -500748110
       vertices: []
       indices: 
       edges: []
@@ -263,7 +307,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 36bbbf2952ae5854aa40d44ca2f3415e
     internalID: 0
     vertices: []
     indices: 
@@ -272,7 +316,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Chicken Blonde  Green_0: -1977093720
+      Chicken Blonde  Green_1: 874663990
+      Chicken Blonde  Green_2: -2105493560
+      Chicken Blonde  Green_3: 981515447
+      Chicken Blonde  Green_4: -1648260176
+      Chicken Blonde  Green_5: 254128353
+      Chicken Blonde  Green_6: -1251489081
+      Chicken Blonde  Green_7: -500748110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
