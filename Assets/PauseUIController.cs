@@ -34,6 +34,9 @@ public class PauseUIController : MonoBehaviour
     private void TogglePauseScreen()
     {
         Debug.Log("Button event triggered from ButtonEventTrigger.");
+
+        Time.timeScale = Time.timeScale != 0 ? 0 : 1;
+        
         if (uiManager != null)
         {
             uiManager.TogglePausePanel();
