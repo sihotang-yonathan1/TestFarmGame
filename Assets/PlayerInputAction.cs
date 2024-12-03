@@ -62,6 +62,24 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Harvest"",
+                    ""type"": ""Button"",
+                    ""id"": ""e7b54b08-5877-41de-a5f8-790403bb9d34"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Plant"",
+                    ""type"": ""Button"",
+                    ""id"": ""f2da7204-6905-4a48-886e-1457c3f990f0"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -207,6 +225,28 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""335eaf10-5523-4143-bcd0-b876084e7a53"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Harvest"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4e63eea4-6b82-425d-a33e-dfafe3d71017"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Plant"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -219,6 +259,8 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_InventoryToggle = m_Player.FindAction("InventoryToggle", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
+        m_Player_Harvest = m_Player.FindAction("Harvest", throwIfNotFound: true);
+        m_Player_Plant = m_Player.FindAction("Plant", throwIfNotFound: true);
     }
 
     ~@PlayerInputAction()
@@ -289,6 +331,8 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_InventoryToggle;
     private readonly InputAction m_Player_Pause;
+    private readonly InputAction m_Player_Harvest;
+    private readonly InputAction m_Player_Plant;
     public struct PlayerActions
     {
         private @PlayerInputAction m_Wrapper;
@@ -297,6 +341,8 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @InventoryToggle => m_Wrapper.m_Player_InventoryToggle;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
+        public InputAction @Harvest => m_Wrapper.m_Player_Harvest;
+        public InputAction @Plant => m_Wrapper.m_Player_Plant;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -318,6 +364,12 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
+            @Harvest.started += instance.OnHarvest;
+            @Harvest.performed += instance.OnHarvest;
+            @Harvest.canceled += instance.OnHarvest;
+            @Plant.started += instance.OnPlant;
+            @Plant.performed += instance.OnPlant;
+            @Plant.canceled += instance.OnPlant;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -334,6 +386,12 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
+            @Harvest.started -= instance.OnHarvest;
+            @Harvest.performed -= instance.OnHarvest;
+            @Harvest.canceled -= instance.OnHarvest;
+            @Plant.started -= instance.OnPlant;
+            @Plant.performed -= instance.OnPlant;
+            @Plant.canceled -= instance.OnPlant;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -357,5 +415,7 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnInventoryToggle(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnHarvest(InputAction.CallbackContext context);
+        void OnPlant(InputAction.CallbackContext context);
     }
 }
