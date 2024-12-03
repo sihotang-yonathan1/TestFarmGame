@@ -48,5 +48,8 @@ TagManager:
   - name: TreeBackground
     uniqueID: 3979592087
     locked: 0
+  - name: UI
+    uniqueID: 3822806301
+    locked: 0
   m_RenderingLayers:
   - Default
