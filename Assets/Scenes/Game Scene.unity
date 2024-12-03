@@ -62991,14 +62991,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4169351870537305669, guid: 772fca2fe8c71574695a0a71b17fd7bb, type: 3}
-      propertyPath: cropType
-      value: 
-      objectReference: {fileID: 11400000, guid: 43bd791e98afaf649ad75cc3230beb25, type: 2}
-    - target: {fileID: 4169351870537305669, guid: 772fca2fe8c71574695a0a71b17fd7bb, type: 3}
-      propertyPath: currentGrowthTime
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5824651181102899504, guid: 772fca2fe8c71574695a0a71b17fd7bb, type: 3}
       propertyPath: m_Name
       value: CropContainer
