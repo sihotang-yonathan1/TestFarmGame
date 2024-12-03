@@ -64,7 +64,7 @@ public class CropManager : MonoBehaviour
         {
             // Logic for harvesting crop (e.g., give player items)
             Debug.Log($"Harvested {cropType.cropName}, got {cropType.yieldAmount} items!");
-
+            
             // Reset crop state
             isPlanted = false;
             currentGrowthTime = 0f;
