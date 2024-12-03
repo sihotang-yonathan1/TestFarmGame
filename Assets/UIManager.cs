@@ -1,10 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections.Generic;
-using static UnityEngine.InputManagerEntry;
-using System.Xml.Linq;
-using TMPro;
-using UnityEditor.PackageManager.UI;
 
 public class UIManager : MonoBehaviour
 {
