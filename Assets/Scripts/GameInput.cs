@@ -8,8 +8,8 @@ public class GameInput : MonoBehaviour
     public event EventHandler OnPauseAction;
     private PlayerInputAction inputActions;
 
-    public event EventHandler OnPlant;
-    public event EventHandler OnHarvest;
+    // public event EventHandler OnPlant;
+    // public event EventHandler OnHarvest;
 
     private void Awake()
     {
@@ -24,22 +24,22 @@ public class GameInput : MonoBehaviour
         inputActions.Player.Pause.performed += Pause_performed;
 
         // plant interaction
-        inputActions.Player.Harvest.performed += Harvest_performed;
-        inputActions.Player.Plant.performed += Plant_performed;
+        // inputActions.Player.Harvest.performed += Harvest_performed;
+        // inputActions.Player.Plant.performed += Plant_performed;
 
     }
 
-    private void Plant_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    /*private void Plant_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         Debug.Log("Plant Perfomed by using keybinding");
         OnPlant?.Invoke(this, EventArgs.Empty);
-    }
+    }*/
 
-    private void Harvest_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+   /* private void Harvest_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         Debug.Log("Harvest Perfomed by using keybinding");
         OnHarvest?.Invoke(this, EventArgs.Empty);
-    }
+    }*/
 
 
 

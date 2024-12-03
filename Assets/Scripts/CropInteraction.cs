@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-/*
+
 public class CropInteraction : MonoBehaviour
 {
     public CropManager cropManager;
@@ -22,8 +22,9 @@ public class CropInteraction : MonoBehaviour
         }
     }
 }
-*/
 
+
+/*
 public class CropInteraction : MonoBehaviour
 {
     public CropManager cropManager;
@@ -68,3 +69,4 @@ public class CropInteraction : MonoBehaviour
     }
 }
 
+*/

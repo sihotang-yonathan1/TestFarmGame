@@ -1,12 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
-/*
+
 public class CropManager : MonoBehaviour
 {
     public Crop cropType;  // The type of crop (e.g., wheat, corn)
     public float currentGrowthTime = 0f;  // Tracks the current growth time
-    public bool isPlanted = false;
+    public bool isPlanted = true;
     public bool isHarvested = false;
     public SpriteRenderer cropRenderer;  // To display crop sprites
     public float growthSpeed = 1f;  // Speed at which crops grow (time multiplier)
@@ -74,7 +74,9 @@ public class CropManager : MonoBehaviour
     }
 }
 
-*/
+
+
+/*
 public class CropManager : MonoBehaviour
 {
     public Crop cropType;  // The type of crop (e.g., wheat, corn)
@@ -149,3 +151,4 @@ public class CropManager : MonoBehaviour
     }
 }
 
+*/
