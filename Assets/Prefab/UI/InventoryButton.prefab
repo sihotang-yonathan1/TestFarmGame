@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 4025052297912099738}
   - component: {fileID: 8804958494375944304}
   - component: {fileID: 9095308708695514170}
+  - component: {fileID: 2120440212387503190}
   m_Layer: 5
   m_Name: InventoryButton
   m_TagString: Untagged
@@ -259,6 +260,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2120440212387503190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929078124596927222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091fe4c9a4e1b10448f1b97d6f8b5af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconImage: {fileID: 2514464237231203113}
+  amountText: {fileID: 4331024441862023110}
 --- !u!1 &4025210434821759497
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,7 +422,7 @@ GameObject:
   - component: {fileID: 6835252436036187488}
   - component: {fileID: 2514464237231203113}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ItemImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

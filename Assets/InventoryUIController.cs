@@ -12,11 +12,21 @@ public class InventoryUIController : MonoBehaviour
         {
             gameInput.OnToggleInventory += ToggleInventory;
         }
+        
+        if (uiManager == null)
+        {
+            Debug.LogError("UIManager is not assigned!");
+        }
     }
 
     private void ToggleInventory(object sender, EventArgs e)
     {
-        uiManager.ToggleInventoryPanel();
+        if (uiManager != null){
+            uiManager?.ToggleInventoryPanel();
+        } else {
+            Debug.LogError("UIManager is not assigned!");
+        }
+
     }
 
 
