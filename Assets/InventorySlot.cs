@@ -23,7 +23,12 @@ public class InventorySlot : MonoBehaviour
 
         if (isSelected)
         {
+            slotButton.GetComponent<Image>().color = Color.gray;
             SlotDetail();
+        }
+        else
+        {
+            slotButton.GetComponent<Image>().color = Color.white;
         }
     }
 

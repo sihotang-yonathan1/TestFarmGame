@@ -62850,14 +62850,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: InventoryButton
       objectReference: {fileID: 0}
-    - target: {fileID: 4331024441862023110, guid: 82b8f2140ce61084db38ef8918b009fb, type: 3}
-      propertyPath: m_fontSize
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4331024441862023110, guid: 82b8f2140ce61084db38ef8918b009fb, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8257771412091925237, guid: 82b8f2140ce61084db38ef8918b009fb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
