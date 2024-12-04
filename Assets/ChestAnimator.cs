@@ -8,14 +8,11 @@ public class ChestAnimator : MonoBehaviour
     public string IS_OPEN_PARAM_KEY = "isOpen";
     public string ANIMATION_NAME = "ChestOpen";
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
     private void Start()
     {
+        // Stop animation when not interacted
         animator.speed = 0;
     }
-
-    // Update is called once per frame
 
     public void ToggleChest()
     {
@@ -29,8 +26,9 @@ public class ChestAnimator : MonoBehaviour
         isOpen = !isOpen;
     }
 
-    private void OpenChest()
+    public void OpenChest()
     {
+        Debug.Log("[Animation] Chest Animated to Open");
         animator.StopPlayback();
         animator.speed = 1f;
         // play animation from beginning
@@ -38,8 +36,9 @@ public class ChestAnimator : MonoBehaviour
         
     }
 
-    private void CloseChest()
+    public void CloseChest()
     {
+        Debug.Log("[Animation] Chest Animated to Close");
         animator.StopPlayback();
         // play backwards
         animator.speed = -1;
