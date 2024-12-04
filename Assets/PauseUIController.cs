@@ -31,7 +31,7 @@ public class PauseUIController : MonoBehaviour
         TogglePauseScreen();
     }
 
-    private void TogglePauseScreen()
+    public void TogglePauseScreen()
     {
         Debug.Log("Button event triggered from ButtonEventTrigger.");
 
