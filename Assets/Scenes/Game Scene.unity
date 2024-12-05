@@ -245,10 +245,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 989663023727391666, guid: 6cac8cc11d8a44a418c46714fdbc5d99, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 989663023727391666, guid: 6cac8cc11d8a44a418c46714fdbc5d99, type: 3}
+      propertyPath: inventoryPanel
+      value: 
+      objectReference: {fileID: 705386554}
     - target: {fileID: 3472930961232045731, guid: 6cac8cc11d8a44a418c46714fdbc5d99, type: 3}
       propertyPath: m_Name
       value: Chest_0
       objectReference: {fileID: 0}
+    - target: {fileID: 4238136973277621226, guid: 6cac8cc11d8a44a418c46714fdbc5d99, type: 3}
+      propertyPath: gameInput
+      value: 
+      objectReference: {fileID: 1418370807}
     - target: {fileID: 6404974819830403419, guid: 6cac8cc11d8a44a418c46714fdbc5d99, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.1610208
@@ -292,19 +304,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3472930961232045731, guid: 6cac8cc11d8a44a418c46714fdbc5d99, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1239673226}
-    - targetCorrespondingSourceObject: {fileID: 3472930961232045731, guid: 6cac8cc11d8a44a418c46714fdbc5d99, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1239673225}
-    - targetCorrespondingSourceObject: {fileID: 3472930961232045731, guid: 6cac8cc11d8a44a418c46714fdbc5d99, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1239673230}
-    - targetCorrespondingSourceObject: {fileID: 3472930961232045731, guid: 6cac8cc11d8a44a418c46714fdbc5d99, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1239673231}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cac8cc11d8a44a418c46714fdbc5d99, type: 3}
 --- !u!1 &7364276
 GameObject:
@@ -319,6 +319,7 @@ GameObject:
   - component: {fileID: 7364279}
   - component: {fileID: 7364278}
   - component: {fileID: 7364281}
+  - component: {fileID: 7364282}
   m_Layer: 5
   m_Name: PauseIcon
   m_TagString: Untagged
@@ -388,7 +389,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7364279}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7364282}
+        m_TargetAssemblyTypeName: PauseIconBehaviourController, Assembly-CSharp
+        m_MethodName: TogglePauseBehaviour
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7364279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,6 +453,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 7364278}
+--- !u!114 &7364282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7364276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65d5a35c1ca7404fa8a60060ad91c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 7364278}
+  uiManager: {fileID: 116621403}
 --- !u!1001 &24395101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3607,129 +3634,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 397604101044079674, guid: 772fca2fe8c71574695a0a71b17fd7bb, type: 3}
   m_PrefabInstance: {fileID: 952162411}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1239673224 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3472930961232045731, guid: 6cac8cc11d8a44a418c46714fdbc5d99, type: 3}
-  m_PrefabInstance: {fileID: 6034917}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1239673225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1239673224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06e4e24a34e845547a2e16b564beed33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1239673226}
-  gameInput: {fileID: 1418370807}
-  isPlayerinRange: 0
---- !u!114 &1239673226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1239673224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 127e5b0228cd6d54fa18289d23941564, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1239673227}
-  isOpen: 0
-  IS_OPEN_PARAM_KEY: isOpen
-  ANIMATION_NAME: ChestOpen
---- !u!95 &1239673227 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1839980104226303108, guid: 6cac8cc11d8a44a418c46714fdbc5d99, type: 3}
-  m_PrefabInstance: {fileID: 6034917}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1239673230
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1239673224}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.00067039207, y: -0.004692372}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.18, y: 0.16}
-    newSize: {x: 0.18, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.14782354, y: 0.10905404}
-  m_EdgeRadius: 0
---- !u!58 &1239673231
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1239673224}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.15
 --- !u!1001 &1305716067
 PrefabInstance:
   m_ObjectHideFlags: 0
