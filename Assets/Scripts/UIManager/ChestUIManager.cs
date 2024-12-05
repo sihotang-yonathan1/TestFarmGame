@@ -11,7 +11,7 @@ public class ChestUIManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        chestAnimator.isOpen = this.isOpen;
+        chestAnimator.isOpen = isOpen;
     }
 
     // TODO: open on Interact
@@ -21,7 +21,7 @@ public class ChestUIManager : MonoBehaviour
         
         // Stop the animation immidiately after the 1st animation play
         chestAnimator.animator.speed = 0;
-        chestAnimator.animator.SetBool(chestAnimator.IS_OPEN_PARAM_KEY, !chestAnimator.isOpen);
+        chestAnimator.animator.SetBool(chestAnimator.IS_OPEN_PARAM_KEY, !isOpen);
     }
 
     // Close after interact

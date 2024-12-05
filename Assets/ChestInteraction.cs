@@ -3,9 +3,9 @@ using UnityEngine;
 public class ChestInteraction : MonoBehaviour
 {
     public GameInput gameInput;
-    public bool isChestOpen = false;
     public ChestUIManager chestUiManager;
 
+    public bool isChestOpen = false;
     public bool isPlayerinRange = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,6 +31,7 @@ public class ChestInteraction : MonoBehaviour
                 chestUiManager.OpenChestUI();
             }
             isChestOpen = !isChestOpen;
+            // chestUiManager.isOpen = isChestOpen;
             
         }
     }
